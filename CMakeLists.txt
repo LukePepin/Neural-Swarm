@@ -6,9 +6,9 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
 endif()
 
-# Default to C++14
+# Default to C++17 for ROS 2 Humble
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -30,6 +30,9 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/controllers)
 
 install(DIRECTORY
   controllers
+  host_node
+  marl_training
+  micro_ros
   urdf
   launch
   worlds
@@ -38,6 +41,9 @@ install(DIRECTORY
 
 file(GLOB_RECURSE scripts_SRC
   "controllers/*.py"
+  "host_node/*.py"
+  "marl_training/*.py"
+  "micro_ros/*.py"
 )
 
 foreach(file ${scripts_SRC})

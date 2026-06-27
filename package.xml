@@ -3,7 +3,7 @@
 <package format="3">
   <name>lp_neural_swarm</name>
   <version>0.10.4</version>
-  <description>Package for controlling neural network-based robotic swarms in ROS2.</description>
+  <description>Package for controlling neural network-based robotic swarms in ROS 2 Humble (Graduate-Level MARL & Micro-ROS Alviks).</description>
   <maintainer email="lukepepin@outlook.com">usr</maintainer>
   <license>Apache-2.0</license>
 
@@ -13,6 +13,8 @@
   <exec_depend>xacro</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>ros2launch</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>micro_ros_agent</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
